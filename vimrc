@@ -8,8 +8,11 @@ set clipboard= "use vim's clip board
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
-"tab setup
+"tab setup 1 recommended
+set tabstop=8
 set softtabstop=4
+set shiftwidth=4
+set expandtab
 
 "vimplug
 call plug#begin()
@@ -18,10 +21,6 @@ Plug 'tpope/vim-fugitive'	"git
 Plug 'mattn/emmet-vim'		"emmet abreviation
 Plug 'mbbill/undotree'		"git-like undohistory. Undo tab
 call plug#end()
-
-
-
-
 
 "****tips fra kristoffer*************
 "vimium
