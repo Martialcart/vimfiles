@@ -4,9 +4,12 @@ source $VIMRUNTIME/defaults.vim
 set number "show line numbers
 set clipboard= "use vim's clip board
 
-#omnifunc setup
-filtype plugin on
+"omnifunc setup
+filetype plugin on
 set omnifunc=syntaxcomplete#Complete
+
+"tab setup
+set softtabstop=4
 
 "vimplug
 call plug#begin()
