@@ -4,6 +4,10 @@ source $VIMRUNTIME/defaults.vim
 set number "show line numbers
 set clipboard= "use vim's clip board
 
+#omnifunc setup
+filtype plugin on
+set omnifunc=syntaxcomplete#Complete
+
 "vimplug
 call plug#begin()
 Plug 'scrooloose/syntastic'	"error higlight
