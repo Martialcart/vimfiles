@@ -22,7 +22,7 @@ Plug 'mattn/emmet-vim'		"emmet abreviation
 Plug 'mbbill/undotree'		"git-like undohistory. Undo tab
 call plug#end()
 
-"****tips fra kristoffer*************
+"****tips fra Christer*************
 "vimium
 "ll/undotree'undo tree
 
