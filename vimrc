@@ -18,6 +18,7 @@ set autoindent
 
 "vimplug
 call plug#begin()
+Plug 'maxmellon/vim-jsx-pretty'	"jsx support
 Plug 'scrooloose/syntastic'	"error higlight
 Plug 'tpope/vim-fugitive'	"git
 Plug 'mattn/emmet-vim'		"emmet abreviation
