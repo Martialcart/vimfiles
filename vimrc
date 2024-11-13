@@ -1,4 +1,4 @@
-"import default settings as base.
+n"import default settings as base.
 source $VIMRUNTIME/defaults.vim
 
 set number "show line numbers
@@ -15,6 +15,9 @@ set shiftwidth=4
 set noexpandtab
 
 set autoindent
+
+"Highlight search
+set hls
 
 "vimplug
 call plug#begin()
