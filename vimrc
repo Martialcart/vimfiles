@@ -30,7 +30,6 @@ call plug#end()
 
 "****tips fra Christer*************
 "vimium
-"ll/undotree'undo tree
 
 "mapleader is lead key for commands(like ctrl is)
 let mapleader = " "
