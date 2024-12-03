@@ -6,7 +6,6 @@ set clipboard= "use vim's clip board
 
 "omnifunc setup
 filetype plugin on
-set omnifunc=syntaxcomplete#Complete
 
 "tab setup 1 recommended
 set tabstop=8
@@ -22,15 +21,16 @@ set hls
 "vimplug
 call plug#begin()
 Plug 'maxmellon/vim-jsx-pretty'	"jsx support
-Plug 'scrooloose/syntastic'	"error higlight
+"Plug 'scrooloose/syntastic'	"error higlight
 Plug 'tpope/vim-fugitive'	"git
 Plug 'mattn/emmet-vim'		"emmet abreviation
 Plug 'mbbill/undotree'		"git-like undohistory. Undo tab
-"Plug 'w0rp/ale'			"lsp integration
+Plug 'w0rp/ale'			"lsp integration
 call plug#end()
 
 "ale settings
-"let g:ale_completion_autimport = 1
+let g:ale_completion_autimport = 1
+set omnifunc=ale#completion#OmniFunc
 
 "****tips fra Christer*************
 "vimium
