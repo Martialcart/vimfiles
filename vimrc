@@ -21,16 +21,29 @@ set hls
 "vimplug
 call plug#begin()
 Plug 'maxmellon/vim-jsx-pretty'	"jsx support
-"Plug 'scrooloose/syntastic'	"error higlight
+Plug 'scrooloose/syntastic'	"error higlight
+Plug 'scrooloose/nerdcommenter'	"comment/ uncomment
 Plug 'tpope/vim-fugitive'	"git
 Plug 'mattn/emmet-vim'		"emmet abreviation
 Plug 'mbbill/undotree'		"git-like undohistory. Undo tab
-Plug 'w0rp/ale'			"lsp integration
+Plug 'tpope/vim-surround'	"handles paranteses tags etc
+Plug 'airblade/vim-gitgutter'	"diff markers
+Plug 'tpope/vim-repeat'		"repeat with . works better with plugins
+Plug 'vim-airline/vim-airline'	"Nice looking menu bars
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
-"ale settings
-let g:ale_completion_autimport = 1
-set omnifunc=ale#completion#OmniFunc
+set omnifunc=syntaxcomplete#Complete
+
+"syntastic recommended starter settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 "****tips fra Christer*************
 "vimium
