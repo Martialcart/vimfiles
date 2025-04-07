@@ -31,6 +31,7 @@ Plug 'airblade/vim-gitgutter'	"diff markers
 Plug 'tpope/vim-repeat'		"repeat with . works better with plugins
 Plug 'vim-airline/vim-airline'	"Nice looking menu bars
 Plug 'vim-airline/vim-airline-themes'
+Plug 'vimwiki/vimwiki'		"wiki
 call plug#end()
 
 set omnifunc=syntaxcomplete#Complete
