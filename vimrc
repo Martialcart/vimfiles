@@ -20,9 +20,9 @@ set hls
 
 "vimplug
 call plug#begin()
-Plug 'maxmellon/vim-jsx-pretty'	"jsx support
+"Plug 'maxmellon/vim-jsx-pretty'	"jsx support
 Plug 'scrooloose/syntastic'	"error higlight
-Plug 'scrooloose/nerdcommenter'	"comment/ uncomment
+Plug 'scrooloose/nerdcommenter'	"comment/ uncomment = space c space
 Plug 'tpope/vim-fugitive'	"git
 Plug 'mattn/emmet-vim'		"emmet abreviation
 Plug 'mbbill/undotree'		"git-like undohistory. Undo tab
