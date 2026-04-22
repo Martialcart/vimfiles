@@ -1,3 +1,5 @@
+set nocompatible "for polyglot, needs to be at top, to not mess with other things
+
 "import default settings as base.
 source $VIMRUNTIME/defaults.vim
 
@@ -20,27 +22,50 @@ set hls
 
 "vimplug
 call plug#begin()
-"Plug 'maxmellon/vim-jsx-pretty'	"jsx support
+Plug 'neoclide/coc.nvim', {'branch': 'release'} "coc lsp
 Plug 'scrooloose/syntastic'	"error higlight
+Plug 'sheerun/vim-polyglot'	"Language highlight package
 Plug 'scrooloose/nerdcommenter'	"comment/ uncomment = space c space
 Plug 'tpope/vim-fugitive'	"git
 Plug 'mattn/emmet-vim'		"emmet abreviation
-Plug 'mbbill/undotree'		"git-like undohistory. Undo tab
+"Plug 'mbbill/undotree'		"git-like undohistory. Undo tab
 Plug 'tpope/vim-surround'	"handles paranteses tags etc
 Plug 'airblade/vim-gitgutter'	"diff markers
 Plug 'tpope/vim-repeat'		"repeat with . works better with plugins
 Plug 'vim-airline/vim-airline'	"Nice looking menu bars
 Plug 'vim-airline/vim-airline-themes'
-"Plug 'vimwiki/vimwiki'		"wiki is buggy 
 call plug#end()
 
-set omnifunc=syntaxcomplete#Complete
+"default autocomplete
+set omnifunc=syntaxcomplete#Complete 
 
-"syntastic recommended starter settings
+"**********LSP***********************************'
+"mappings CoC
+"ctrl + space triggers CoC autocomplete
+inoremap <silent><expr> <C-space> coc#refresh()
+"insert suggestion with enter
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>"
+"coc mappings
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+"essential vim settings for coc
+set encoding=utf-8
+set hidden
+"set nobackup
+"set nowritebackup
+set updatetime=300
+set signcolumn=yes
+"*****************************LSP*****************
+
+"syntastic recommended starter settings 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+
+"synstastic settings 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -51,10 +76,6 @@ let g:syntastic_check_on_wq = 0
 
 "mapleader is lead key for commands(like ctrl is)
 let mapleader = " "
-
-"custom mapping
-nnoremap <leader>w :w<cr>
-inoremap jk <esc>
 
 "Move lines
 nnoremap <A-j> :m .+1<CR>==
